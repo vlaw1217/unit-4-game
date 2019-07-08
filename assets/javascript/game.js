@@ -13,27 +13,42 @@ $(document).ready(() => {
         let randomNum = Math.floor(Math.random() * (targetNum.length));
 
         document.getElementById("fixNum").innerHTML = (targetNum[randomNum]);
-        
+
     });
-    let crystalHiddenNum = [6, 7, 8, 9];
+
+    
+    let crystalHiddenNum = [4, 5, 6, 7, 8, 9];
     
     let hiddenNumber = Math.floor(Math.random() * (crystalHiddenNum.length));
-
+    
 
     $("#greenCrystal").click(() => {
+         document.getElementById("hiddenNum").innerHTML = crystalHiddenNum[hiddenNumber];
+     
+    });
+      
+    $("#redCrystal").click(() => {
         document.getElementById("hiddenNum").innerHTML = crystalHiddenNum[hiddenNumber];
-        
-
-       
-
 
     });
 
+    $("#yellowCrystal").click(() => {
+        document.getElementById("hiddenNum").innerHTML = crystalHiddenNum[hiddenNumber];
+        
+    });
+        
+    $("#blueCrystal").click(() => {
+        document.getElementById("hiddenNum").innerHTML = crystalHiddenNum[hiddenNumber];
+
+    });
+
+            
 
 
+    
+            
 
-
-});
+ });
 
 
 
