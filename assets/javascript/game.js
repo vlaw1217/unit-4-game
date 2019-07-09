@@ -4,7 +4,7 @@ $(document).ready(() => {
 
     let myElements =
 
-        $("#rules").html(rules.innerHTML + "<br/>" + "Each crystal has its own hidden number." + "<br/>" + " Each time you click the crystal the hidden number will add it up." + "<br/>" + "The add up is equal to the number its provedied you will get a score.");
+        $("#rules").html(rules.innerHTML + "<br/>" + "Each crystal has its own hidden number." + "<br/>" + " Each time you click the crystal the hidden number will add it up." + "<br/>" + "If the adding up number is match the number it shows on the left box. You will win.");
 
 
     function randomNum() {
@@ -55,10 +55,10 @@ $(document).ready(() => {
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
                     //alert('current total is ' + g + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
-                    document.getElementById("lose").innerHTML = "you lose";
+                    document.getElementById("lose").innerHTML = "YOU LOSE";
                 } else if (click == randomHiddenNum) {
                     //alert('current total is ' + g + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
-                    document.getElementById("win").innerHTML = "you win";
+                    document.getElementById("win").innerHTML = "YOU WIN";
                 }
             });
 
@@ -70,14 +70,14 @@ $(document).ready(() => {
                 click += r;
 
                 if (click < randomHiddenNum) {
-                    alert('current total is ' + r + ' < ranNum ' + randomHiddenNum);
+                    //alert('current total is ' + r + ' < ranNum ' + randomHiddenNum);
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
                     //alert('current total is ' + r + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
-                    document.getElementById("lose").innerHTML = "you lose";
+                    document.getElementById("lose").innerHTML = "YOU LOSE";
                 } else if (click == randomHiddenNum) {
                     //alert('current total is ' + r + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
-                    document.getElementById("win").innerHTML = "you win";
+                    document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
             });
@@ -94,10 +94,10 @@ $(document).ready(() => {
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
                     // alert('current total is ' + y + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
-                    document.getElementById("lose").innerHTML = "you lose";
+                    document.getElementById("lose").innerHTML = "YOU LOSE";
                 } else if (click == randomHiddenNum) {
                     //alert('current total is ' + y + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
-                    document.getElementById("win").innerHTML = "you win";
+                    document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
             });
@@ -115,10 +115,10 @@ $(document).ready(() => {
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
                     //alert('current total is ' + b + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
-                    document.getElementById("lose").innerHTML = "you lose";
+                    document.getElementById("lose").innerHTML = "YOU LOSE";
                 } else if (click == randomHiddenNum) {
                     // alert('current total is ' + b + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
-                    document.getElementById("win").innerHTML = "you win";
+                    document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
             });
