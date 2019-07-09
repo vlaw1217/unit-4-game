@@ -42,12 +42,13 @@ $(document).ready(() => {
         let gc; {
             $("#greenCrystal").click(() => {
                 click += g;
-                if (click < randomHiddenNum) {
+                if (click) {
                     document.getElementById("hiddenNum").innerHTML = click;
-                } else if (click > randomHiddenNum) {
-                    message = "Sorry you lose, Please try again!";
-                } else (click == randomHiddenNum); {
-                    message = 'YOU GOT IT';
+                } else if (g > randomHiddenNum) {
+                    stop()
+                    document.getElementById("lose").innerHTML = "Sorry you lose, Please try again!"
+                } else (g === randomHiddenNum); {
+                    document.getElementById('win').innerHTML = "YEAH! YOU GOT IT!!!"
                 }
             });           
         }
@@ -55,12 +56,13 @@ $(document).ready(() => {
         let rc; {
             $("#redCrystal").click(() => {
                 click += r;
-                if (click < randomHiddenNum) {
+                if (click) {
                     document.getElementById("hiddenNum").innerHTML = click;
-                } else if (click > randomHiddenNum) {
-                    message = "Sorry you lose, Please try again!";
-                } else (click == randomHiddenNum); {
-                    message = 'YOU GOT IT';
+                } else if (r > randomHiddenNum) {
+                    stop()
+                    document.getElementById("lose").innerHTML = "Sorry you lose, Please try again!"
+                } else (r === randomHiddenNum); {
+                    document.getElementById('win').innerHTML = "YEAH! YOU GOT IT!!!"
                 }
             });
         }
@@ -68,12 +70,13 @@ $(document).ready(() => {
         let yc; {
             $("#yellowCrystal").click(() => {
                 click += y;              
-                if (click < randomHiddenNum) {
+                if (click) {
                     document.getElementById("hiddenNum").innerHTML = click;
-                } else if (click > randomHiddenNum) {
-                    message = "Sorry you lose, Please try again!";
-                } else (click == randomHiddenNum); {
-                    message = 'YOU GOT IT';
+                } else if (y > randomHiddenNum) {
+                    stop()
+                    document.getElementById("lose").innerHTML = "Sorry you lose, Please try again!"
+                } else (y === randomHiddenNum); {
+                    document.getElementById('win').innerHTML = "YEAH! YOU GOT IT!!!"
                 }           
             }); 
         }
@@ -82,12 +85,13 @@ $(document).ready(() => {
 
             $("#blueCrystal").click(() => {
                 click += b;
-                if (click < randomHiddenNum) {
+                if (click) {
                     document.getElementById("hiddenNum").innerHTML = click;
-                } else if (click > randomHiddenNum) {
-                    message = "Sorry you lose, Please try again!";
-                } else (click == randomHiddenNum); {
-                    message = 'YOU GOT IT';
+                } else if (b > randomHiddenNum) {
+                    stop()
+                    document.getElementById("lose").innerHTML = "Sorry you lose, Please try again!"
+                } else (b === randomHiddenNum); {
+                    document.getElementById('win').innerHTML = "YEAH! YOU GOT IT!!!"
                 }         
             });
         }
