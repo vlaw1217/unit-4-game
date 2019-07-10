@@ -17,13 +17,8 @@ $(document).ready(() => {
             randomHiddenNum = targetNum[randomNum];
 
 
-
-
             let crystalHiddenNum = [4, 5, 6, 7, 8, 9];
-
-            /*let hiddenNumber = Math.floor(Math.random() * (crystalHiddenNum.length));
-            x = crystalHiddenNum[hiddenNumber];*/
-
+        
             let hiddenNumberG = Math.floor(Math.random() * (crystalHiddenNum.length));
             g = crystalHiddenNum[hiddenNumberG];
 
@@ -37,7 +32,6 @@ $(document).ready(() => {
             b = crystalHiddenNum[hiddenNumberB];
 
 
-            //alert('ran x is ' + randomHiddenNum + ' ran g is ' + g + ' ran r is ' + r + ' ran y is ' + y + ' ran b is ' + b);
         });
 
 
@@ -54,10 +48,8 @@ $(document).ready(() => {
 
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
-                    //alert('current total is ' + g + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
                     document.getElementById("lose").innerHTML = "YOU LOSE";
                 } else if (click == randomHiddenNum) {
-                    //alert('current total is ' + g + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
                     document.getElementById("win").innerHTML = "YOU WIN";
                 }
             });
@@ -70,13 +62,10 @@ $(document).ready(() => {
                 click += r;
 
                 if (click < randomHiddenNum) {
-                    //alert('current total is ' + r + ' < ranNum ' + randomHiddenNum);
                     document.getElementById("hiddenNum").innerHTML = click;
-                } else if (click > randomHiddenNum) {
-                    //alert('current total is ' + r + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
+                } else if (click > randomHiddenNum) {               
                     document.getElementById("lose").innerHTML = "YOU LOSE";
-                } else if (click == randomHiddenNum) {
-                    //alert('current total is ' + r + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
+                } else if (click == randomHiddenNum) {               
                     document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
@@ -90,13 +79,10 @@ $(document).ready(() => {
                 click += y;
 
                 if (click < randomHiddenNum) {
-                    alert('current total is ' + y + ' < ranNum ' + randomHiddenNum);
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
-                    // alert('current total is ' + y + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
                     document.getElementById("lose").innerHTML = "YOU LOSE";
                 } else if (click == randomHiddenNum) {
-                    //alert('current total is ' + y + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
                     document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
@@ -111,13 +97,10 @@ $(document).ready(() => {
                 click += b;
 
                 if (click < randomHiddenNum) {
-                    // alert('current total is ' + b + ' < ranNum ' + randomHiddenNum);
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
-                    //alert('current total is ' + b + ' > ranNum ' + randomHiddenNum + ' GAME OVER');
                     document.getElementById("lose").innerHTML = "YOU LOSE";
                 } else if (click == randomHiddenNum) {
-                    // alert('current total is ' + b + ' = ranNum ' + randomHiddenNum + ' YOU GOT IT');
                     document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
