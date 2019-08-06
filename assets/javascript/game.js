@@ -4,7 +4,7 @@ $(document).ready(() => {
 
     let myElements =
 
-        $("#rules").html(rules.innerHTML + "<br/>" + "Each crystal has its own hidden number." + "<br/>" + " Each time you click the crystal the hidden number will add it up." + "<br/>" + "If the adding up number is match the number it shows on the left box. You will win.");
+        $("#rules").html(rules.innerHTML + "<br/>" + "Each crystal has its own hidden number." + "<br/>" + " Each time you click the crystal the hidden number will add it up." + "<br/>" + "If the adding up number which is matched the number on the left box. You will win.");
 
 
     function randomNum() {
@@ -14,7 +14,7 @@ $(document).ready(() => {
             document.getElementById("fixNum").innerHTML = (targetNum[randomNum]);
 
 
-            randomHiddenNum = targetNum[randomNum];
+            randomHiddenNum = parseInt(targetNum[randomNum]);
 
 
             let crystalHiddenNum = [4, 5, 6, 7, 8, 9];
@@ -49,7 +49,7 @@ $(document).ready(() => {
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
                     document.getElementById("lose").innerHTML = "YOU LOSE";
-                } else if (click == randomHiddenNum) {
+                } else if (click === randomHiddenNum) {
                     document.getElementById("win").innerHTML = "YOU WIN";
                 }
             });
@@ -65,7 +65,7 @@ $(document).ready(() => {
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {               
                     document.getElementById("lose").innerHTML = "YOU LOSE";
-                } else if (click == randomHiddenNum) {               
+                } else if (click === randomHiddenNum) {               
                     document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
@@ -82,7 +82,7 @@ $(document).ready(() => {
                     document.getElementById("hiddenNum").innerHTML = click;
                 } else if (click > randomHiddenNum) {
                     document.getElementById("lose").innerHTML = "YOU LOSE";
-                } else if (click == randomHiddenNum) {
+                } else if (click === randomHiddenNum) {
                     document.getElementById("win").innerHTML = "YOU WIN";
                 }
 
@@ -111,8 +111,10 @@ $(document).ready(() => {
 
     }
 
+    $("#resetBtn").click(function (){
 
-
+        location.reload()
+    })
 
 });
 
